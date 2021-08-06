@@ -8,6 +8,12 @@ trigger:
 
 pool:
   vmImage: vs2017-win2016
+  strategy:
+    maxParallel: 4
+    matrix:
+      win:
+        CONFIG: win64
+        CF_MAX_PY_VER: 37
 
 steps:
 - script: echo Hello, world!
